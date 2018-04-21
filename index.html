@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/html2canvas.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script>
+         function startTime() {
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('clock').innerHTML =
+                h + ":" + m + ":" + s;
+                var t = setTimeout(startTime, 500);
+            }
+            function checkTime(i) {
+                if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+                return i;
+            }
+
+    </script>
+
+   
+    
+</head>
+<body onload="startTime()"> 
+    <div class="container-fluid">
+        <nav class="navbar bg-success"> 
+            <div class="navbar-brand bg-success" >
+                <img src="images/logo.png" height="50px" width="50px" >
+            </div>
+            <div class="dropdown dropleft" >
+                    <button class="btn btn-secondary bg-success " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu " aria-labelledby="dropdownMenuButton" id="navagator">
+                        <div id="doctorDP">
+                            <img src="images/doctor.png" class="rounded-circle mx-auto d-block  img-thumbnail">
+                        </div>
+                        <div id="doctorname">
+                            <h4 class="text-center"><b>DR RAMANAYAKE</b></h4>
+                            <hr>
+                        </div>
+                        <div id="doctorOnBoard">
+                            <div class="row">
+                                <h4 class="col-md-4 text-center" style="padding-right: 0rem; ">OUT</h4>
+                                
+                            <div class="col-md-4">
+                                    <label class="switch">
+                        
+                                            <input type="checkbox">
+                                            <span class="slider"></span>
+                                    </label>                  
+                            </div>
+                            <div class="col-md-4">
+                                <h4>IN</h4>
+                            </div>
+                            </div>
+                            <hr>
+                        </div>
+
+                            <button class="btn btn-info btn-block btn-dropdown" id="Statistics"> Statistics</button>
+                            <button class="btn btn-info btn-block btn-dropdown" id="Logout">Logout</button>
+                    </div>
+            </div>
+        </nav>
+        <div class="row" id="page-body">
+            <div class="col-md-8 " id="wellcome" style="background-image: url(images/Background.jpg); background-size: cover">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="greetings" style="color: white; float:center;">Good Evening </h1>
+                    </div>
+
+                    <div class="col-md-12" id="date">
+                        <h1 style="color: white">Monday</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <h1 id="clock" style="color: white"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" id="patient">
+                <div class="row" style="padding-top: 10px; background-color: teal; padding-bottom: 10px;">
+                    <br>
+                    <div class="col-md-6">
+                        <h4  style="color:white;">PATIENT LOG</h4>
+                    </div>
+                    <div class="col-md-6" style="padding-left: 150px">
+                            <button type="button" class="btn btn-primary btn-sm pull-left" >
+                                    Patients <span class="badge badge-light ">4</span>
+                            </button>
+                    </div>
+                </div>
+                <div class="row" id="patinetName" style="padding: 10px 20px 10px 10px;">
+                        <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroup-sizing-default" >Master</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
+                              </div>
+                </div>
+
+
+               <div class="row">
+                   <div class="col-md-6">
+                        <div class="row" id="email" style="padding: 10px 20px 10px 10px;">
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text" id="inputGroup-sizing-default" >Age</span>
+                                        </div>
+                                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
+                                      </div>
+                        </div>
+                               
+                   </div>
+
+
+                   <div class="col-md-6">
+
+                        <div class="row" id="email" style="padding: 10px 20px 10px 10px;">
+                                <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text" id="inputGroup-sizing-default" >No</span>
+                                        </div>
+                                        <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
+                                      </div>
+                        </div>
+        
+                   </div>
+
+               </div>
+
+
+                <div class="row" id="patinetName" style="padding: 10px 20px 10px 10px;">
+                        <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroup-sizing-default" >Email</span>
+                                </div>
+                                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" disabled>
+                              </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-12" style="padding-bottom: 10px; padding-right: 20px; " id="channelnow">
+                        <button class="btn btn-primary btn-block" style="border-radius: 0px;" data-toggle="modal" data-target="#sketchpad" >Channel now</button>
+                    </div>
+                </div>
+
+                <table class="table table-striped   " style="background-color: white">
+                    <thead>
+
+                         
+                    <tr>
+                            <th>Date</th>
+                            <th>Reason</th>
+                            <th>Docotor</td>
+                            <th>Remedies</th>
+                        </tr>
+                    </thead>
+                   
+<tbody>
+
+        <tr>
+                <td>2/1/2015</td>
+                <td>Hedach</td>
+                <td>DR Amrasooriya</td>
+                <td><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i><link rel="text" href="#">open</link></td>
+            </tr>
+            <tr>
+                <td>5/3/2015</td>
+                <td>Adasd</td>
+                <td>Dr Kalpa</td>
+                <td><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i><link rel="text" href="#">open</link></td>
+            </tr>
+            <tr>
+                <td>4/3/2015</td>
+                <td>Heart attack</td>
+                <td>Dr adadas</td>
+                <td><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i><link rel="text" href="#">open</link></td>
+            </tr>
+</tbody>
+                    
+                </table>
+
+
+                <div class="row">
+                        <div class="col-md-12" style="padding-bottom: 10px; padding-right: 20px; padding-top: 50px; " id=nextpatient>
+                            <button class="btn btn-success btn-block" style="border-radius: 0px;">Next patient </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    <!-- Modal -->
+    <div class="modal fade" id="sketchpad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content" style="height: 700px; width: 600px">
+            <div class="modal-body">
+                
+                    <div id="sketch">
+                            <canvas id="paint"></canvas>
+                     </div> 
+            </div>
+            <div class="modal-footer">
+                    <div class="row"></div>
+                    <div class="col-md-6" style="padding-right: 400px;">
+              <button type="button" class="btn btn-info">Print Out</button>
+                        
+                    </div>
+                    <div id="col-md-6">
+                            <button type="button" class="btn btn-primary" id="toPharmacy">To Pharmacy</button>
+
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Script-->
+
+      <script src="js/index.js"></script>
+
+</body>
+</html>
+
